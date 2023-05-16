@@ -43,6 +43,8 @@
 			</div>
 		</div>
 	</div>
+	
+
 	<div id="sec02_02" class="wrap">
 		<p class="bg"><img src="images/saikyo.jpg" alt=""></p>
 		<div class="txt">
@@ -64,6 +66,60 @@
 				<h2>Top Gun: Maverick</h2>
 				<img src="images/Maverick.jpg" width="288" height="288" alt="">
 				<p>米海軍史上最高のパイロットでありながら、無鉄砲な性格から一向に昇進せず現役であり続けるMaverick。ある日TOP GUN(米海軍エリート・パイロット養成学校)時のライバルであり現海軍トップのIcemanから、達成不可能なミッションに直面したTOP GUNの新世代パイロット達を指導するという特命を授かる。その中にはかつて同じ戦闘機での訓練飛行中に命を落とした相棒Gooseの息子Roosterの姿があった。ミッション達成のためにMaverickが用意した厳しい練習は次第に生徒の反感を買い、Roosterからは「お前のせいで父親は死んだ」と糾弾される。「もう誰も死なせたくない」という強い決意を胸に秘め、若きTOP GUNと共に自らも空に命を懸ける。</p>
+				<html lang="ja">
+
+				<head>
+					<meta charset="utf-8">
+				    <title>グラフ</title> 
+				  </head>
+				  <body>
+					<h1>レーダーチャート</h1>
+					<canvas id="myRaderChart"></canvas>
+					<!-- CDN -->
+				    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+					
+					<script>
+					  var ctx = document.getElementById("myRaderChart");
+					  var myRadarChart = new Chart(ctx, {
+						  type: 'radar', 
+						  data: { 
+							  labels: ["英語", "数学", "国語", "理科", "社会"],
+							  datasets: [{
+								  label: 'Aさん',
+								  data: [92, 72, 86, 74, 86],
+								  backgroundColor: 'RGBA(225,95,150, 0.5)',
+								  borderColor: 'RGBA(225,95,150, 1)',
+								  borderWidth: 1,
+								  pointBackgroundColor: 'RGB(46,106,177)'
+							  }, {
+								  label: 'Bさん',
+								  data: [73, 95, 80, 87, 79],
+								  backgroundColor: 'RGBA(115,255,25, 0.5)',
+								  borderColor: 'RGBA(115,255,25, 1)',
+								  borderWidth: 1,
+								  pointBackgroundColor: 'RGB(46,106,177)'
+							  }]
+						  },
+						  options: {
+							  title: {
+								  display: true,
+								  text: '試験成績'
+							  },
+							  scale:{
+								  ticks:{
+									  suggestedMin: 0,
+									  suggestedMax: 100,
+									  stepSize: 10,
+									  callback: function(value, index, values){
+										  return  value +  '点'
+									  }
+								  }
+							  }
+						  }
+					  });
+					  </script>
+				  </body>
+				  </html>
 			</li>
 			<li>
 
