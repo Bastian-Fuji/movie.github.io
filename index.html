@@ -8,6 +8,7 @@
 <link rel="stylesheet" media="all" href="css/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/chart.js"></script>
 </head>
 
 <body>
@@ -17,69 +18,93 @@
 	<div class="panel">
 		<ul>
 			<li><a href="#header">TOP</a></li>
-			<li><a href="#sec02">MESSAGE</a></li>
-			<li><a href="#sec03">SERVICE</a></li>
-			<li><a href="#sec04">STORY</a></li>
+			<li><a href="#sec03">Action</a></li>
+			<li><a href="#sec04">Human</a></li>
 			<li><a href="#sec05">PROFILE</a></li>
 		</ul>
 	</div>
 </nav>
 <header id="header">
-	<img src="images/mainImg.jpg" alt="">
+	<img src="images/Maverick.jpg" alt="">
 	<div id="slogan">
 		<h1>Vestibulum mauris</h1>
 		<h2>最新技術と自然との調和を目指す</h2>
 	</div>
 </header>
 
+
 <!-- MESSAGE -->
-<section id="sec02">
-	<div class="wrap">
-		<p class="bg"><img src="images/Maverick.jpg" alt=""></p>
-		<div class="txt">
-			<div class="vMid">
-				<h2>MESSAGE</h2>
-				<p>ちかごろ世間で日本歴史の科学的研究ということがしきりに叫ばれている。科学的研究というのが近代史学の学問的方法による研究という意義であるならば、これは史学の学徒の間においては一般に行われていることであるから、今さらこと新しくいう。</p>
-			</div>
-		</div>
-	</div>
-	
-
-	<div id="sec02_02" class="wrap">
-		<p class="bg"><img src="images/saikyo.jpg" alt=""></p>
-		<div class="txt">
-			<div class="vMid">
-				<h2>MESSAGE</h2>
-				<p>日本歴史の科学的研究ということがしきりに叫ばれている。科学的研究というのが近代史学の学問的方法による研究という意義であるならば、これは史学の学徒の間においては一般に行われていることであるから、今さらこと新しくいう。</p>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- // MESSAGE -->
-
-
-<!-- SERVICE -->
 <section id="sec03">
 	<div class="inner">
 		<ul class="col3">
 			<li>
 				<h2>Top Gun: Maverick</h2>
 				<img src="images/Maverick.jpg" width="288" height="288" alt="">
-				<p>a米海軍史上最高のパイロットでありながら、無鉄砲な性格から一向に昇進せず現役であり続けるMaverick。ある日TOP GUN(米海軍エリート・パイロット養成学校)時のライバルであり現海軍トップのIcemanから、達成不可能なミッションに直面したTOP GUNの新世代パイロット達を指導するという特命を授かる。その中にはかつて同じ戦闘機での訓練飛行中に命を落とした相棒Gooseの息子Roosterの姿があった。ミッション達成のためにMaverickが用意した厳しい練習は次第に生徒の反感を買い、Roosterからは「お前のせいで父親は死んだ」と糾弾される。「もう誰も死なせたくない」という強い決意を胸に秘め、若きTOP GUNと共に自らも空に命を懸ける。</p>
+				<p>米海軍史上最高のパイロットでありながら、無鉄砲な性格から一向に昇進せず現役であり続けるMaverick。ある日TOP GUN(米海軍エリート・パイロット養成学校)時のライバルであり現海軍トップのIcemanから、達成不可能なミッションに直面したTOP GUNの新世代パイロット達を指導するという特命を授かる。その中にはかつて同じ戦闘機での訓練飛行中に命を落とした相棒Gooseの息子Roosterの姿があった。ミッション達成のためにMaverickが用意した厳しい練習は次第に生徒の反感を買い、Roosterからは「お前のせいで父親は死んだ」と糾弾される。「もう誰も死なせたくない」という強い決意を胸に秘め、若きTOP GUNと共に自らも空に命を懸ける。</p>
 				<html lang="ja">
-
+					
 				<head>
 					<meta charset="utf-8">
-				    <title>グラフ</title> 
+				   <title>グラフ</title> 
 				  </head>
 				  <body>
 					<h1>レーダーチャート</h1>
 					<canvas id="myRaderChart"></canvas>
 					<!-- CDN -->
-				    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+				   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 					
 					<script>
 					  var ctx = document.getElementById("myRaderChart");
+					  var myRadarChart = new Chart(ctx, {
+						  type: 'radar', 
+						  data: { 
+							  labels: ["英語", "数学", "国語", "理科", "社会"],
+							  datasets: [{
+								  label: 'Aさん',
+								  data: [5, 4, 5, 3, 5],
+								  backgroundColor: 'RGBA(225,95,150, 0.5)',
+								  borderColor: 'RGBA(225,95,150, 1)',
+								  borderWidth: 1,
+								  pointBackgroundColor: 'RGB(46,106,177)'
+							  }]
+						  },
+						  options: {
+							  title: {
+								  display: true,
+								  text: '試験成績'
+							  },
+							  scale:{
+								  ticks:{
+									  suggestedMin: 0,
+									  suggestedMax: 5,
+									  stepSize: 5,
+									  
+								  }
+							  }
+						  }
+					  });
+					  </script>
+				  </body>
+				  </html>
+				</li>
+				<li>
+                <h2>最強のふたり</h2>
+				<img src="images/saikyo.jpg" width="288" height="288" alt="">
+				<p>スラム街出身のアフリカ系青年ドリスは、失業手当目当てで向かった先で素直な性格を買われ、大富豪の障害者フィリップの世話役として雇われることとなった。移乗動作、マッサージ、シャワー、挙句の果てには排泄まで手伝うことになり、不満をたれながらも毎日を過ごす。冗談を飛ばすドリスの発言には一般的には差別ととらえられるような物もあるが、障がい者に気を変に気遣わずフラットに接するドリスの人柄に惹かれ、徐々に彼らの友情は生まれていく。障がい者と健常者、大富豪とスラム出身という様々な対比がありながらも、互いに不足している部分を補いあえるフィリップとグリスだからこそ「最強のふたり」なのであるaaaああああああaaaaaaaaa。</p>
+				<html lang="ja">
+
+				<head>
+					<meta charset="utf-8">
+				   <title>グラフ</title> 
+				  </head>
+				  <body>
+					<h1>レーダーチャート</h1>
+					<canvas id="myRaderChart2"></canvas>
+					<!-- CDN -->
+				   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+					
+					<script>
+					  var ctx = document.getElementById("myRaderChart2");
 					  var myRadarChart = new Chart(ctx, {
 						  type: 'radar', 
 						  data: { 
@@ -120,19 +145,114 @@
 					  </script>
 				  </body>
 				  </html>
-			</li>
-			<li>
-
-                <h2>最強のふたり</h2>
-				<img src="images/saikyo.jpg" width="288" height="288" alt="">
-				<p>スラム街出身のアフリカ系青年ドリスは、失業手当目当てで向かった先で素直な性格を買われ、大富豪の障害者フィリップの世話役として雇われることとなった。移乗動作、マッサージ、シャワー、挙句の果てには排泄まで手伝うことになり、不満をたれながらも毎日を過ごす。冗談を飛ばすドリスの発言には一般的には差別ととらえられるような物もあるが、障がい者に気を変に気遣わずフラットに接するドリスの人柄に惹かれ、徐々に彼らの友情は生まれていく。障がい者と健常者、大富豪とスラム出身という様々な対比がありながらも、互いに不足している部分を補いあえるフィリップとグリスだからこそ「最強のふたり」なのである。</p>
-			</li>
-			<li>
-
+				</li>
+				<li>
                 <h2>STORY</h2>
-				<img src="images/circleImg03.png" width="288" height="288" alt="">
-				<p>科学的研究というのが近代史学の学問的方法による研究という意義であるならば、これは史学の学徒の間においては一般に行われていることであるから、今さらこと新しくいう。</p>
+				<img src="images/saikyo.jpg" width="288" height="288" alt="">
+				<p>科学的研究というのが近代史学の学問的方法による研究という意義であるならば、これは史学の学徒の間においては一般に行われていることであるから、今さらこと新しくいう。あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ。あああああああああああああ</p>
+				<html lang="ja">
+
+				<head>
+					<meta charset="utf-8">
+				   <title>グラフ</title> 
+				  </head>
+				  <body>
+					<h1>レーダーチャート</h1>
+					<canvas id="myRaderChart3"></canvas>
+					<!-- CDN -->
+				   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+					
+					<script>
+					  var ctx = document.getElementById("myRaderChart3");
+					  var myRadarChart = new Chart(ctx, {
+						  type: 'radar', 
+						  data: { 
+							  labels: ["英語", "数学", "国語", "理科", "社会"],
+							  datasets: [{
+								  label: 'Aさん',
+								  data: [92, 72, 86, 74, 86],
+								  backgroundColor: 'RGBA(225,95,150, 0.5)',
+								  borderColor: 'RGBA(225,95,150, 1)',
+								  borderWidth: 1,
+								  pointBackgroundColor: 'RGB(46,106,177)'
+							  }, {
+								  label: 'Bさん',
+								  data: [73, 95, 80, 87, 79],
+								  backgroundColor: 'RGBA(115,255,25, 0.5)',
+								  borderColor: 'RGBA(115,255,25, 1)',
+								  borderWidth: 1,
+								  pointBackgroundColor: 'RGB(46,106,177)'
+							  }]
+						  },
+						  options: {
+							  title: {
+								  display: true,
+								  text: '試験成績'
+							  },
+							  scale:{
+								  ticks:{
+									  suggestedMin: 0,
+									  suggestedMax: 100,
+									  stepSize: 10,
+									  callback: function(value, index, values){
+										  return  value +  '点'
+									  }
+								  }
+							  }
+						  }
+					  });
+					  </script>
+				  </body>
+				</html>
 			</li>
 		</ul>
 	</div>
 </section>
+<!-- // MESSAGE -->
+
+<!-- HTMLコード -->
+<hr class="hr1">
+
+<!-- PROFILE -->
+<section id="sec05">
+	<header>
+		<h2>PROFILE</h2>
+	</header>
+	<div class="inner">
+		<ul class="col2">
+			<li>
+				<dl>
+					<dt>社名</dt>
+					<dd>Sample Company</dd>
+					<dt>代表取締役</dt>
+					<dd>見本 太郎</dd>
+					<dt>住所</dt>
+					<dd>見本県見本市仮区見本町1-3-5</dd>
+					<dt>電話番号</dt>
+					<dd>01234-567-8901</dd>
+					<dt>設立</dt>
+					<dd>20XX年5月5日</dd>
+					<dt>資本金</dt>
+					<dd>1,000,000円</dd>
+					<dt>主な取引先</dt>
+					<dd><p><a href="#" target="_blank">見本商事株式会社</a></p><p><a href="#" target="_blank">株式会社年中無休商事</a></p><p><a href="#" target="_blank">株式会社仮称</a></p></dd>
+				</dl>
+			</li>
+			<li>
+				<div id="map">
+					<!-- GOOGLE MAP -->
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.5937927089367!2d136.92980931491988!3d36.70829797996758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff781ec5af4ca3f%3A0x2ade3e8e4c2801b8!2z56aP5bKh6aeF!5e0!3m2!1sja!2sus!4v1478313402186" allowfullscreen></iframe>
+					<!-- // GOOGLE MAP -->
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
+<!-- // PROFILE -->
+
+<footer id="footer">
+	Copyright(c) 20XX Sample Inc. All Rights Reserved. Design by <a href="http://f-tpl.com" target="_blank">http://f-tpl.com</a><!-- ←クレジット表記を外す場合はシリアルキーが必要です http://f-tpl.com/credit/ -->
+</footer>
+
+</body>
+</html>

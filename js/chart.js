@@ -36,3 +36,4 @@ var myRadarChart = new Chart(ctx, {
 		}
 	}
 });
+
