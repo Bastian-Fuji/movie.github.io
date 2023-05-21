@@ -155,13 +155,16 @@ section h2{
 }
 
 
-/* SEC04 STORY & SUCCESS
+/* SEC04 SERVICE MESSAGE STORY
 ------------------------------------------------------------*/
-#sec04{
-	background: url(../images/bgSec04.jpg) no-repeat 100% 100% fixed;
-	background-size: cover;
-	-webkit-background-size: cover;
-	color: #fff;
+.col4 li{
+	margin-bottom: 50px;
+}
+
+.col4 img{
+	max-width: 288px;
+	display: block;
+	margin: -5px auto 20px;
 }
 
 
@@ -302,6 +305,21 @@ section h2{
 	}
 
 	.col3 li{
+		display: inline-block;
+		width: 30%;
+		padding: 0 1.5%;
+		margin-bottom: 0;
+		vertical-align: top;
+		text-align: left;
+	}
+
+	/* SEC04 SERVICE MESSAGE STORY
+	-----------------*/
+	.col4{
+		text-align: center;
+	}
+
+	.col4 li{
 		display: inline-block;
 		width: 30%;
 		padding: 0 1.5%;
@@ -470,12 +488,12 @@ section h2{
 	}
 }
 
-/* CSSコード */
-.hr1 {
-	position: relative;
-	  height: 3px;
-	  border-width: 0;
-	  background-color: #00bcd4;
-	  background-image: -webkit-linear-gradient( 135deg, #FD6585 10%, #0D25B9 100%);
-	  background-image: linear-gradient( 135deg, #FD6585 10%, #0D25B9 100%);
-  }
+
+.mgr-10 {
+    margin-right: 120px;
+    }
+.mgr-10 {
+    margin-right: 120px;
+    }
+
+	<p><span class="mgr-10"></span></p>
