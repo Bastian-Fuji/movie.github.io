@@ -167,59 +167,37 @@ section h2{
 	margin: -5px auto 20px;
 }
 
-
-/* SEC05 PROFILE
+/* SEC05 SERVICE MESSAGE STORY
 ------------------------------------------------------------*/
-#sec05{
-	padding-top: 50px;
+.col5 li{
+	margin-bottom: 50px;
 }
 
-#sec05 dl{
-	line-height: 1.2;
-}
-
-#sec05 dt{
-	clear: left;
-	float: left;
+.col5 img{
+	max-width: 288px;
 	display: block;
-	width: 30%;
-	margin-right: 10%;
-	margin-bottom: 20px;
-	text-align: right;
-	line-height: 1.6em;
+	margin: -5px auto 20px;
 }
 
-#sec05 dd{
-	width: 60%;
-	float: left;
-	text-align: left;
-	margin-bottom: 15px;
-	line-height: 1.6em;
+/* SEC06 SERVICE MESSAGE STORY
+------------------------------------------------------------*/
+.col6 li{
+	margin-bottom: 50px;
 }
 
-#sec05 header{
-	display: none;
+.col6 img{
+	max-width: 288px;
+	display: block;
+	margin: -5px auto 20px;
 }
-
-#map{
-	position: relative;
-	padding-bottom: 75%;
-	height: 0;
-	overflow: hidden;
-}
-
-#map iframe{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100% !important;
-	height: 100% !important;
-	border: 0;
-}
-
 
 /* RESPONSIVE 設定
 ------------------------------------------------------------*/
+
+/* RESPONSIVE 設定
+------------------------------------------------------------*/
+
+
 
 @media only screen and (min-width: 1200px){
 	.inner{
@@ -328,172 +306,34 @@ section h2{
 		text-align: left;
 	}
 	
-	/* SEC05 PROFILE
+
+	/* SEC05 SERVICE MESSAGE STORY
 	-----------------*/
-	#sec05{
-		padding-top: 120px;
+	.col5{
+		text-align: center;
 	}
-	
-  #footer{
-		padding: 30px 10px 70px 0;
-	}
-}
 
-@media only screen and (min-width: 641px){
-	.col2 li{
-		width: 40%;
-		padding: 0 3%;
+	.col5 li{
+		display: inline-block;
+		width: 30%;
+		padding: 0 1.5%;
+		margin-bottom: 0;
 		vertical-align: top;
-	}
-}
-
-@media only screen and (max-width: 640px){
-	#map iframe{
-	  width: 96% !important;
-		left: 2%;
-	}
-}
-
-@media only screen and (max-width: 799px){
-	#slogan h1{
-		font-size: 31px;
-	}
-
-	#slogan h2{
-		font-size: 16px;
-	}
-
-  a#menu{
-  	display: inline-block;
-  	position: relative;
-  	width: 40px;
-  	height: 40px;
-  	margin: 10px;
-	}
-
-	#menuBtn{
-  	display: block;
-  	position: absolute;
-  	top: 50%;
-  	left: 50%;
-  	width: 18px;
-  	height: 2px;
-  	margin: -1px 0 0 -7px;
-  	background: #fff;
-  	transition: .2s;
-	}
-
-	#menuBtn:before, #menuBtn:after{
-  	display: block;
-  	content: "";
-  	position: absolute;
-  	top: 50%;
-  	left: 0;
-  	width: 18px;
-  	height: 2px;
-  	background: #fff;
-  	transition: .3s;
-	}
-
-	#menuBtn:before{
-  	margin-top: -7px;
-	}
-
-	#menuBtn:after{
-  	margin-top: 5px;
-	}
-
-	a#menu .close{
-  	background: transparent;
-	}
-
-	a#menu .close:before, a#menu .close:after{
-  	margin-top: 0;
-	}
-
-	a#menu .close:before{
-  	transform: rotate(-45deg);
-  	-webkit-transform: rotate(-45deg);
-	}
-
-	a#menu .close:after{
-  	transform: rotate(-135deg);
-  	-webkit-transform: rotate(-135deg);
-	}
-
-	.panel{
-		width: 100%;
-		display: none;
-		overflow: hidden;
-		position: relative;
-		left: 0;
-		top: 0;
-		z-index: 100;
-	}
-
-	#mainnav{
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 100%;
-		text-align: right;
-		z-index:500;
-	}
-
-	#mainnav ul{
-		border-bottom: 1px solid #ccc;
-		background: #fff;
 		text-align: left;
 	}
 
-	#mainnav li a{
-		position: relative;
-		display:block;
-		padding:15px 25px;
-		border-bottom: 1px solid #ccc;
-		color: #000;
-		font-weight: 400;
+/* SEC06 SERVICE MESSAGE STORY
+	-----------------*/
+	.col6{
+		text-align: center;
 	}
 
-	#mainnav li a:before{
-		display: block;
-		content: "";
-		position: absolute;
-		top: 50%;
-		left: 5px;
-		width: 6px;
-		height: 6px;
-		margin: -4px 0 0 0;
-		border-top: solid 2px #000;
-		border-right: solid 2px #000;
-		-webkit-transform: rotate(45deg);
-		transform: rotate(45deg);
+	.col6 li{
+		display: inline-block;
+		width: 30%;
+		padding: 0 1.5%;
+		margin-bottom: 0;
+		vertical-align: top;
+		text-align: left;
 	}
-	.col3 li{
-		margin: 0 auto;
-		display: block;
-	max-width: 288px;
-	}
-}
-
-@media only screen and (max-width: 1199px){
-	section h2{
-		padding: 50px 0 20px 0;
-	}
-	#sec01 h2{
-		padding: 70px 0 20px;
-	}
-	.vMid{
-		padding: 0 20px;
-	}
-}
-
-
-.mgr-10 {
-    margin-right: 120px;
-    }
-.mgr-10 {
-    margin-right: 120px;
-    }
-
-	<p><span class="mgr-10"></span></p>
+	
